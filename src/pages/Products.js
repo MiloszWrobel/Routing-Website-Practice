@@ -8,11 +8,13 @@ const PRODUCTS = [
 function Products() {
   return (
     <>
-      <h1>The products</h1>
+      <h1>The products Page</h1>
       <ul>
         {PRODUCTS.map((product) => (
           <li key={product.id}>
-            <Link to={`/products/${product.id}`}>{product.title}</Link>
+            <Link to={`${product.id}`} relative="path">
+              {product.title}
+            </Link>
           </li>
         ))}
       </ul>
